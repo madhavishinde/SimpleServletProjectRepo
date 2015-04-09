@@ -37,7 +37,9 @@ public class SimpleServlet extends HttpServlet {
 		System.out.println("In POST method of servlet");
 		PrintWriter writer = response.getWriter();
 		String userName = request.getParameter("userName");
-		writer.println("In POST method and displaying HTML message as Hello " + userName);
+		String fullName = request.getParameter("fullName");
+		String prof = request.getParameter("profession");
+		writer.println("In POST method and displaying HTML message as Hello " + userName + "! and your full name is " + fullName + " \n Your profession is " + prof);
 	}
 
 }
